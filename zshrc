@@ -254,6 +254,10 @@ alias ports="grep open | cut -d / -f 1 | xargs | tr ' ' ',' | txc"
 alias gadd="sudo git add -A"
 alias gcom="sudo git commit -a"
 alias gpu="sudo git push"
+alias setenv="tmux set-environment"
+alias se="searchsploit"
+alias eip="echo $ip"
+alias labs="cd /home/dandi/Cybsec/OSCP/Labs"
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
