@@ -1,0 +1,21 @@
+
+# konnsole
+git clone https://github.com/arcticicestudio/nord-konsole.git
+cp nord-konsole/src/nord.colorscheme .local/share/konsole/
+cd nord-konsole
+./install.sh
+#reczna zmiana profilu w konsoli
+
+#starship
+curl https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraCode.zip -O -L
+mkdir /usr/share/fonts/FiraCode
+unzip FiraCode.zip -d /usr/share/fonts/FiraCode/
+fc-cache -f -v
+curl -sS https://starship.rs/install.sh | sh
+echo 'eval "$(starship init zsh)"' >> /root/.zshrc
+source /root/.zshrc
+
+#tmux
+curl -o ~/.tmux.conf https://raw.githubusercontent.com/danior10/Usefull-scripts/main/tmux.conf
+dos2unix ~/.tmux.conf
+
